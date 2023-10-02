@@ -3,11 +3,13 @@
   <POU Name="MAIN" Id="{1e09f2e8-537e-0277-2846-f29868bedc69}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	
 	XPlanarTable			: FB_XPlanarSystem;
 	Mover01					: FB_XPlanarMoverStandard;
 	
 	Run						: BOOL;
 	xpState					: UDINT;
+	CycleCounter			: UDINT;
 
 	xpPos1					: PositionXYC;
 	xpPos2					: PositionXYC;
@@ -24,7 +26,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CASE xpState OF
+      <ST><![CDATA[
+CASE xpState OF
 0:	// init, wait for Run
 	IF Run THEN xpState := xpState + 10; END_IF
 		
@@ -54,7 +57,10 @@ END_VAR
 	xpState := xpState + 10;	
 
 70:	// at pos2?  repeat
-	IF Mover01.P_MoveToPosition.Done THEN xpState := 30; END_IF
+	IF Mover01.P_MoveToPosition.Done THEN 
+		CycleCounter := CycleCounter + 1;			
+		xpState := 30; 
+	END_IF
 	
 END_CASE
 
