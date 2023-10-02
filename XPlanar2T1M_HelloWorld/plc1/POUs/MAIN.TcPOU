@@ -11,7 +11,6 @@ VAR
 
 	xpPos1					: PositionXYC;
 	xpPos2					: PositionXYC;
-
 	Pos1x					: LREAL := 120.0;
 	Pos1y					: LREAL := 120.0;
 	Pos2x					: LREAL := 360.0;
@@ -36,7 +35,7 @@ END_VAR
 20:	// enabled?
 	IF Mover01.P_Enable.Done THEN xpState := xpState + 10; END_IF		
 
-30:	// if running set positions
+30:	// if running, set / update positions
 	IF Run THEN
 		xpPos1.SetValuesXYC(Pos1x, Pos1y, 0);
 		xpPos2.SetValuesXYC(Pos2x, Pos2y, 0);

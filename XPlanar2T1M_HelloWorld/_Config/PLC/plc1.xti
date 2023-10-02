@@ -621,7 +621,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{EDB7405D-E674-48FD-AA31-FF3388C3094F}" Name="plc1" PrjFilePath="..\..\plc1\plc1.plcproj" TmcFilePath="..\..\plc1\plc1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="1" TmcPath="plc1\plc1.tmc" TmcHash="{C9F4481C-2A31-E707-DF00-7D71EEC3C955}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="1" TmcPath="plc1\plc1.tmc" TmcHash="{726F4D93-C816-0392-C836-C35F7B17132E}">
 			<Name>plc1 Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
